@@ -133,8 +133,8 @@ def train_model(model, n_epochs, train_loader, valid_loader, cuda_avaliability):
                 accuracy = accuracy + torch.mean(equals.type(torch.FloatTensor))
         
         #Computing averages and printing                    
-        train_loss = train_loss / len(train_loader.sampler)
-        valid_loss = valid_loss / len(valid_loader.sampler)
+        train_loss = train_loss / len(train_loader)
+        valid_loss = valid_loss / len(valid_loader)
         
         print('\n.... EPOCH #', e, ' ....')
         print('train_loss = ', train_loss)

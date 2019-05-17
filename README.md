@@ -9,5 +9,6 @@ Dataset I used: https://www.kaggle.com/thedagger/pokemon-generation-one/
 
 Note: I only used the files that had the four starters (Bulbasaur, Charmander, Pikachu and Squirtle)
 
-Future plans:
--In the future I plan on messing with transfer learning to classify all 151. 
+Later, I used a pretrained densenet network but retrained the classifier on the original dataset from above (all 151 Kanto Pokemon). 
+
+Through this process, I was able to get 73% accuracy on my validation set. 

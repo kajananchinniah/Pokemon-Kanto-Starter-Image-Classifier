@@ -34,10 +34,11 @@ train_on_gpu = torch.cuda.is_available()
 mean = [0.5, 0.5, 0.5]
 std = [0.5, 0.5, 0.5]
 file_load_from = 'kanto_starter_classifier.pt'
+im_len = 48
+im_wid = 48
 
-
-#Applying transform
-transform = transforms.Compose([transforms.Resize(48), transforms.CenterCrop(48),
+#Applying transform; images are 3x48x48
+transform = transforms.Compose([transforms.Resize(im_len), transforms.CenterCrop(im_len),
                                 transforms.ToTensor(),
                                 transforms.Normalize(mean, std)])
 

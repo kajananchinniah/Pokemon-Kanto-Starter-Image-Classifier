@@ -28,12 +28,15 @@ batch_size = 32
 validation_percent = 0.2
 n_epochs = 30
 cuda_avaliability = torch.cuda.is_available()
+mean = [0.5, 0.5, 0.5]
+std = [0.5, 0.5, 0.5]
+im_len = 48
+im_wid = 48
 
-#Applying transformations onto set
-transform = transforms.Compose([transforms.Resize(48), transforms.CenterCrop(48),
+#Applying transformations onto set; images are 3x48x48
+transform = transforms.Compose([transforms.Resize(im_len), transforms.CenterCrop(im_len),
                                 transforms.ToTensor(),
-                                transforms.Normalize([0.5, 0.5, 0.5], 
-                                                     [0.5, 0.5, 0.5])])
+                                transforms.Normalize(mean, std)])
 
 #Loading image dataset
 dataset = datasets.ImageFolder(data_dir, transform = transform)

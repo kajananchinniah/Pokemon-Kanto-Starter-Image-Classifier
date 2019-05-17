@@ -1,6 +1,6 @@
 # Pokemon-Kanto-Starter-Image-Classifier
 
-Image classifier implemented using PyTorch. 
+Image classifier implemented using PyTorch. The classifier guesses if the image is one of the four starters from the Kanto games. 
 
 Originally I had wanted to classifiy all 151 Pokemon, but it was out of my scope (computation power wise + time).
 ~90% accuracy was achieved on my validation set.

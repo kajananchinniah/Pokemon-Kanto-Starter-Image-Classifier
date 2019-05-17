@@ -1,6 +1,6 @@
 # Pokemon-Kanto-Starter-Image-Classifier
 
-Image clasifier implemented using PyTorch. 
+Image classifier implemented using PyTorch. 
 
 Originally I had wanted to classifiy all 151 Pokemon, but it was out of my scope (computation power wise + time).
 ~90% accuracy was achieved on my validation set.

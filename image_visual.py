@@ -25,8 +25,7 @@ def showImage(image, mean, std):
     image[0] = image[0] * std[0] + mean[0]
     image[1] = image[1] * std[1] + mean[1]
     image[2] = image[2] * std[2] + mean[2]
-    plt.imshow(image.permute(1,2,0).numpy()) #Found permute online, don't fully understand it. TODO: Research on this
-
+    plt.imshow(image.permute(1,2,0).numpy())
 
 def visualizeData(images, mean, std, classes, top_class, labels):
     figure = plt.figure(figsize = (20, 20)) #arbiturary numbers

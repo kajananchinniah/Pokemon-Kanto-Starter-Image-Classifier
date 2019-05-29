@@ -23,12 +23,9 @@ def showImage(image, mean, std):
     #Converting image to CPU
     image = image.cpu()
     #Unnormalize image, assuming it's 3x48x48 tensor
-    image = image * numpy.array(std) + numpy.array(mean)
-    '''
     image[0] = image[0] * std[0] + mean[0]
     image[1] = image[1] * std[1] + mean[1]
     image[2] = image[2] * std[2] + mean[2]
-    '''
     plt.imshow(image.permute(1,2,0).numpy())
 
 def visualizeData(images, mean, std, classes, top_class, labels):
